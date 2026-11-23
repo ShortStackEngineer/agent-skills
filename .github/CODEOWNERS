@@ -1,0 +1,8 @@
+# Require Skill Library Steward review before releasing changes to shared skills.
+# Replace placeholder handles with your organization's actual GitHub teams.
+
+*                           @your-org/skill-library-stewards
+/shared/                    @your-org/skill-library-stewards @your-org/knowledge-stewards
+/skills/repo-kb-lint/       @your-org/skill-library-stewards @your-org/knowledge-stewards
+/skills/repo-kb-author/     @your-org/skill-library-stewards @your-org/knowledge-stewards
+/skills/platform-map-author/ @your-org/skill-library-stewards @your-org/architecture-stewards
