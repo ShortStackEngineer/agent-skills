@@ -21,6 +21,7 @@ SHARED_MAPPINGS: tuple[tuple[str, tuple[str, ...]], ...] = (
         (
             "skills/repo-kb-lint/scripts/validate_kb.py",
             "skills/repo-kb-author/scripts/validate_kb.py",
+            "skills/platform-impact-discovery/scripts/validate_kb.py",
         ),
     ),
     (
@@ -28,6 +29,7 @@ SHARED_MAPPINGS: tuple[tuple[str, tuple[str, ...]], ...] = (
         (
             "skills/repo-kb-lint/references/knowledge-debt-contract.md",
             "skills/repo-kb-author/references/knowledge-debt-contract.md",
+            "skills/platform-impact-discovery/references/knowledge-debt-contract.md",
         ),
     ),
 )

@@ -26,7 +26,7 @@ def load_module(name: str, path: Path):
 class TestSkillPackaging(unittest.TestCase):
     def test_every_skill_has_valid_frontmatter_and_no_parent_traversal(self) -> None:
         skill_dirs = sorted(p for p in SKILLS_DIR.iterdir() if p.is_dir())
-        self.assertGreaterEqual(len(skill_dirs), 3)
+        self.assertGreaterEqual(len(skill_dirs), 4)
 
         for skill_dir in skill_dirs:
             skill_md = skill_dir / "SKILL.md"
