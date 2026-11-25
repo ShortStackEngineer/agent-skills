@@ -12,6 +12,7 @@ with Claude Code, Codex, and Cursor.
 | [`repo-kb-lint`](skills/repo-kb-lint/SKILL.md) | `read-only` | Research orchestrator, CI, auditors | Audits standardized product `README.md` files (deterministic schema/link/freshness checks + semantic drift) and emits draft `KnowledgeDebt`. |
 | [`repo-kb-author`](skills/repo-kb-author/SKILL.md) | `draft-write` | Product & delivery teams | Bootstraps or non-destructively revises product root `README.md` files (preserving non-standard sections) and syncs PR diffs. |
 | [`platform-map-author`](skills/platform-map-author/SKILL.md) | `draft-write` | Domain, product, architecture & data owners | Conversationally drafts/updates one-file-per-entity authoritative map YAML files in the owner's preferred vocabulary (DDD or non-DDD). |
+| [`platform-impact-discovery`](skills/platform-impact-discovery/SKILL.md) | `read-only` | Initiative leads, architects, research orchestrator | Discovers participating product teams and data owners across platform maps and repo KBs, producing a Contribution Matrix, Conceptual Flow, and Owner Alignment Packet. |
 
 ---
 
@@ -26,6 +27,7 @@ gh skills install --agent github-copilot --scope project <org>/<repo> repo-kb-au
 
 # Read-only auditors / research orchestrator
 gh skills install --agent github-copilot --scope project <org>/<repo> repo-kb-lint
+gh skills install --agent github-copilot --scope project <org>/<repo> platform-impact-discovery
 
 # Authoritative platform-maps repo
 gh skills install --agent github-copilot --scope project <org>/<repo> platform-map-author
@@ -36,6 +38,7 @@ gh skills install --agent github-copilot --scope project <org>/<repo> platform-m
 npx skills add <org>/<repo> --skill repo-kb-author
 npx skills add <org>/<repo> --skill repo-kb-lint
 npx skills add <org>/<repo> --skill platform-map-author
+npx skills add <org>/<repo> --skill platform-impact-discovery
 ```
 
 ---
