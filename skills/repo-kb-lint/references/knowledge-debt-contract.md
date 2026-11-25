@@ -46,7 +46,7 @@ unmapped owner, or unresolved conflict.
 ```yaml
 knowledge_debt:
   - id: "KD-DRAFT-001"
-    category: "<missing_section | stale_review | broken_link | code_doc_conflict | unmapped_owner | map_conflict>"
+    category: "<missing_section | stale_review | broken_link | code_doc_conflict | unmapped_owner | map_conflict | sensitive_data_exposure>"
     severity: "<High | Medium | Low>"
     gap: "<Concise description of what is missing, stale, or contradictory>"
     source_evidence:
@@ -68,6 +68,6 @@ knowledge_debt:
 
 | Severity | Criteria |
 | --- | --- |
-| **High** | Missing KB entry point, undocumented public/external interface, unmapped data/error-state owner, or active conflict between code and contract affecting participation accuracy. |
-| **Medium** | `last_reviewed` exceeds review cadence (`> 180` days), broken internal file reference, or missing system boundary / domain term definition. |
+| **High** | Missing KB entry point, undocumented public/external interface, unmapped data/error-state or decision-authority owner, exposed credentials/PII/restricted operational data (`sensitive_data_exposure`), or active conflict between code and contract affecting participation accuracy. |
+| **Medium** | `last_reviewed` exceeds review cadence (`> 180` days), broken internal file reference, `CODEOWNERS` conflated with business/product ownership without Domain Map confirmation, or missing system boundary / domain term definition. |
 | **Low** | Minor formatting drift, missing optional metadata, or prose clarity issue that does not affect dependency or ownership conclusions. |

@@ -3,7 +3,9 @@
 > **Usage:** Use this template for the **root `README.md`** of each product
 > repository so both **humans** and **agentic workflows** share a single,
 > consistent entry point. (For multi-product monorepos, keep a short product
-> index in root `README.md` linking to each product's standardized `README.md`.)
+> index in root `README.md` linking to each product's standardized `README.md`,
+> and distinguish technical maintenance ownership of shared libraries from
+> business product accountability.)
 >
 > **Revising an existing `README.md`:** Map content that belongs in Sections
 > 1–8 into the standard layout, preserve any disagreements with code/contracts
@@ -43,6 +45,8 @@ authoritative_maps:
 | --- | --- | --- | --- |
 | `<e.g., Quote retrieval>` | `<Handles quote lookup and timeout fallback>` | `[src/quotes/retrieve.ts](src/quotes/retrieve.ts)` @ `<sha>` | `Implemented` / `Declared` |
 
+- **Decisions owned (optional):** `<State transitions, eligibility rules, or policy decisions this repo has authority over — with source path @ sha, or TBD>`
+
 ## 3. System boundaries
 - **In scope:** `<Concrete responsibilities owned by this codebase>`
 - **Out of scope:** `<Adjacent capabilities explicitly handled elsewhere>`
@@ -73,8 +77,9 @@ authoritative_maps:
 | `<e.g., Channel Web>` | `Upstream` | Calls quote retrieval API | `[api/openapi.yaml](api/openapi.yaml)` | `Intended` |
 
 ## 8. Owner references
-- **Product owner:** `<Name / Team — per Domain Map>`
-- **Delivery team:** `<Team — per Authoritative Map or TBD>`
+- **Business accountable (Product owner):** `<Name / Team — per Domain Map; do not infer from CODEOWNERS>`
+- **Decision authority:** `<Owner of domain rules / state transitions — per Domain Map or TBD>`
+- **Technical maintainers (Delivery team):** `<Team — CODEOWNERS is evidence of maintenance only>`
 - **Escalation / routing channel:** `<Agreed human process — no autonomous agent outreach>`
 
 ## Known visibility limits & open conflicts
